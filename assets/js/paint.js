@@ -2,20 +2,20 @@ function configureListeners() {
     let images = document.getElementsByTagName('img');  
 
      for (var i = 0; i < images.length; i++) {        
-        document.getElementById(images[i].id).addEventListener('mouseover', addOpactiy, false)
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
         document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)     
     } 
 }
 
 function addOpacity(event) {
-    if(this.classList.contains('dim')) {
+    if (this.classList.contains('dim')) {
         this.classList.add('dim')
     }
     getProductInfo(event.target.id);     
 }
 
 function removeOpacity(event) {
-    if(this.classList.contains('dim')) {
+    if (this.classList.contains('dim')) {
         this.classList.remove('dim')
     }
 
